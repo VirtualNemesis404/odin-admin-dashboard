@@ -3,3 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.container{
+    display: grid;
+    grid-template-rows: 140px 1fr;
+    grid-template-columns: 280px 1fr;
+    height: 100vh;
+}
+
+.sidebar{
+    grid-row: span 2;
+}
+
+
+.sidebar, .header, .main-content{
+    border: 1px solid black;
+}
