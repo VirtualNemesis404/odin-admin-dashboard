@@ -1,7 +1,12 @@
+:root{
+    --primary-color: #198fcf;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:  "Roboto", sans-serif;;
 }
 
 .container{
@@ -13,9 +18,17 @@
 
 .sidebar{
     grid-row: span 2;
+    padding: 18px;
+    background-color: var(--primary-color);
+    color: white;
 }
 
 
 .sidebar, .header, .main-content{
     border: 1px solid black;
+}
+
+.menu-item a{
+    text-decoration: none;
+    color: white;
 }
