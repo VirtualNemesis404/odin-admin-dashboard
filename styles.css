@@ -12,7 +12,7 @@
 .container{
     display: grid;
     grid-template-rows: 1fr 6fr;
-    grid-template-columns: 260px 1fr;
+    grid-template-columns: minmax(200px,260px) 1fr;
     height: 100vh;
 }
 
@@ -37,7 +37,7 @@
     height: 36px;
 }
 
-.menu-item img, .search-bar img, .profile img{
+.menu-item img, .search-bar img, .profile img, .card img{
     width: 18px;
     height: 18px;
 }
@@ -147,4 +147,89 @@ button{
 
 .profile p,.user-section p{
     font-weight: 600;
+}
+
+.main-content{
+    display: grid;
+    background-color: rgb(224, 227, 230);
+    padding: 21px 14px;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.projects{
+    grid-row: span 2;
+    display: grid;
+    gap: 8px;
+    grid-template-rows: min-content;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 280px );
+    gap: 12px;
+}
+
+.card{
+    background-color: white;
+    border-left: 6px solid rgb(233, 164, 25);
+    border-radius: 6px;
+    padding: 18px;
+    width: 280px;
+    font-size: 14px;
+    display: grid;
+    gap: 4px;
+    box-shadow: 2px 2px 4px lightgray;
+}
+
+.card > p{
+    color: rgb(108, 108, 108);
+    font-size: 13px;
+}
+
+.card-actions{
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+    justify-content: end;
+}
+
+.announcements , .trending {
+    display: grid;
+    grid-template-rows: min-content;
+    gap: 8px;
+}
+.announcements .card, .trending .card{
+    border: none;
+    width: 220px;
+}
+
+.announcement{
+    font-size: 11px;
+}
+
+.announcement > p {
+    color: rgb(108, 108, 108);
+}
+
+.divider{
+    background-color: rgb(170, 170, 170);
+    height: 1px;
+    margin: 8px 0;
+    border-radius: 100px;
+}
+
+.user{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, min-content);
+    grid-template-rows: min-content;
+    gap: 12px;
+    font-size: 12px;
+   align-items: center;
+}
+
+.user .project-name{
+    color: rgb(108, 108, 108);
 }
